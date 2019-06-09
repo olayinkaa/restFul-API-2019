@@ -22,6 +22,9 @@ const UserControl = require('./controllers/UserController');
 
 // routes
 app.post('/api/user/create',UserControl.create);
+app.get('/api/user',UserControl.read);
+app.put('/api/user/update/:id',UserControl.update);
+app.delete('/api/user/:id',UserControl.delete);
 
 // start server
 app.listen(PORT,()=>{
